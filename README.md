@@ -66,3 +66,17 @@ This repository contains two related pipelines for DATA 226:
 - Temperature trend analysis and visualization.
 - Forecast-driven alerts or downstream analytics.
 - Demonstration of Airflow + Snowflake + Snowflake ML integration.
+
+## HW6 – Incremental Weather ETL
+
+This DAG implements an incremental ETL pipeline using Apache Airflow.
+
+Key features:
+- DAG ID: `weather_ETL_incremental`
+- start_date: 2026-02-28
+- catchup: False
+- Incremental logic using Airflow logical date
+- Deletes existing rows for the run date window before inserting new records (idempotent design)
+
+File:
+- weather_ETL_incremental.py
